@@ -19,17 +19,6 @@
 / {
     combos { compatible = "zmk,combos"; };
 
-    behaviors {
-        Down: Down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOWN";
-            bindings = <&kp J>, <&kp DOWN_ARROW>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
