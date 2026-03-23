@@ -30,10 +30,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE   &kp Q           &kp W           &kp E             &kp R        &kp T        &kp Y        &kp U            &kp I          &kp O    &kp P          &kp BSPC
-&kp TAB      &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &lt 4 G      &mt RCTRL H  &kp J            &kp K          &kp L    &kp SEMICOLON  &kp SQT
-&lt 1 TILDE  &kp Z           &kp X           &kp C             &kp V        &kp B        &kp N        &kp M            &kp COMMA      &kp DOT  &kp FSLH       &lt 2 PIPE
-                                             &kp LGUI          &kp LCTRL    &kp SPACE    &kp RET      &kp RIGHT_SHIFT  &kp RIGHT_ALT
+&kp ESCAPE          &kp Q           &kp W           &kp E             &kp R        &kp T        &kp Y    &kp U            &kp I          &kp O    &kp P          &kp BSPC
+&mt LEFT_SHIFT TAB  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &lt 4 G      &kp H    &kp J            &kp K          &kp L    &kp SEMICOLON  &lt 2 SINGLE_QUOTE
+&lt 1 TILDE         &kp Z           &kp X           &kp C             &kp V        &kp B        &kp N    &kp M            &kp COMMA      &kp DOT  &kp FSLH       &lt 2 PIPE
+                                                    &kp LGUI          &kp LCTRL    &kp SPACE    &kp RET  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
 
@@ -82,10 +82,10 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &msc MOVE_Y(15)  &mkp LCLK       &mkp RCLK     &mkp MCLK        &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp ESCAPE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &msc MOVE_Y(15)  &trans          &trans        &trans           &trans      &trans
-                        &trans  &trans  &trans    &trans           &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP    &mkp LCLK       &mkp RCLK     &mkp MCLK        &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp ESCAPE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &trans          &trans        &trans           &trans      &trans
+                        &trans  &trans  &trans    &trans          &trans          &trans
             >;
 
             label = "Mouse";
