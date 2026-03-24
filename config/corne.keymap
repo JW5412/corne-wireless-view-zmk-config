@@ -141,7 +141,7 @@
             bindings = <
 &to 0   &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP     &trans          &kp I         &kp O            &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp ESCAPE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN   &trans          &trans        &trans           &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN   &kp LS(M)       &trans        &trans           &trans      &trans
                         &trans  &trans  &trans    &trans          &trans          &to 0
             >;
 
@@ -160,4 +160,5 @@
         };
     };
 };
+
 
