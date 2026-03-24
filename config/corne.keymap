@@ -22,36 +22,32 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        Down: Down {
+        gresc: Down {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOWN";
             bindings = <&kp J>, <&kp DOWN_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        Up: Up {
+        gresc: Up {
             compatible = "zmk,behavior-mod-morph";
-            label = "UP";
             bindings = <&kp K>, <&kp UP_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        Left: Left {
+        gresc: Left {
             compatible = "zmk,behavior-mod-morph";
-            label = "LEFT";
             bindings = <&kp H>, <&kp LEFT_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        Right: Right {
+        gresc: Right {
             compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT";
             bindings = <&kp L>, <&kp RIGHT_ARROW>;
 
             #binding-cells = <0>;
