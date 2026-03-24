@@ -21,6 +21,44 @@
 / {
     combos { compatible = "zmk,combos"; };
 
+    behaviors {
+        Down: Down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN";
+            bindings = <&kp J>, <&kp DOWN_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        Up: Up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP";
+            bindings = <&kp K>, <&kp UP_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        Left: Left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT";
+            bindings = <&kp H>, <&kp LEFT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        Right: Right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT";
+            bindings = <&kp L>, <&kp RIGHT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -33,10 +71,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE   &kp Q           &kp W           &kp E             &kp R        &kp T        &kp Y    &kp U            &kp I      &kp O    &kp P          &kp BSPC
-&lt 1 TAB    &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &lt 4 G      &kp H    &kp J            &kp K      &kp L    &kp SEMICOLON  &lt 2 SINGLE_QUOTE
-&lt 1 TILDE  &kp Z           &kp X           &kp C             &kp V        &kp B        &kp N    &kp M            &kp COMMA  &kp DOT  &kp FSLH       &lt 2 PIPE
-                                             &kp LGUI          &kp LCTRL    &kp SPACE    &kp RET  &kp RIGHT_SHIFT  &tog 3
+&kp ESCAPE          &kp Q           &kp W           &kp E             &kp R        &kp T        &kp Y    &kp U            &kp I          &kp O    &kp P          &kp BSPC
+&mt LEFT_SHIFT TAB  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &lt 4 G      &kp H    &kp J            &kp K          &kp L    &kp SEMICOLON  &lt 2 SINGLE_QUOTE
+&lt 1 TILDE         &kp Z           &kp X           &kp C             &kp V        &kp B        &kp N    &kp M            &kp COMMA      &kp DOT  &kp FSLH       &lt 2 PIPE
+                                                    &kp LGUI          &kp LCTRL    &kp SPACE    &kp RET  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
 
@@ -49,10 +87,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp N1             &kp N2      &kp N3            &kp N4          &kp N5    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &trans
-&trans  &kp K_VOLUME_UP    &trans      &trans            &trans          &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &kp K_VOLUME_DOWN  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &trans    &trans    &trans    &trans  &trans     &trans  &trans
-                                       &trans            &trans          &trans    &trans    &trans    &trans
+&trans  &kp N1             &kp N2      &kp N3            &kp N4  &kp N5    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &trans
+&trans  &kp K_VOLUME_UP    &trans      &trans            &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &kp K_VOLUME_DOWN  &kp C_NEXT  &kp C_PLAY_PAUSE  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
+                                       &trans            &trans  &trans    &trans    &trans    &trans
             >;
         };
 
@@ -76,7 +114,7 @@
             bindings = <
 &to 0   &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP     &trans          &kp I         &kp O            &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN   &kp LS(M)       &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN   &trans          &trans        &trans           &trans  &trans
                         &trans  &trans  &trans    &trans          &trans          &to 0
             >;
 
@@ -95,4 +133,3 @@
         };
     };
 };
-
