@@ -22,33 +22,55 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        gresc: Down {
+        Down: Down {
             compatible = "zmk,behavior-mod-morph";
+            label = "DOWN";
             bindings = <&kp J>, <&kp DOWN_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        gresc: Up {
+        Up: Up {
             compatible = "zmk,behavior-mod-morph";
+            label = "UP";
             bindings = <&kp K>, <&kp UP_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        gresc: Left {
+        Left: Left {
             compatible = "zmk,behavior-mod-morph";
+            label = "LEFT";
             bindings = <&kp H>, <&kp LEFT_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        gresc: Right {
+        Right: Right {
             compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT";
             bindings = <&kp L>, <&kp RIGHT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        PgUp: PgUp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGUP";
+            bindings = <&kp Y>, <&kp PAGE_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        PgDn: PgDn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGDN";
+            bindings = <&kp N>, <&kp PAGE_DOWN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -67,9 +89,9 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE          &kp Q           &kp W           &kp E             &kp R        &kp T        &kp Y    &kp U            &kp I          &kp O    &kp P          &kp BSPC
-&mt LEFT_SHIFT TAB  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &lt 4 G      &kp H    &kp J            &kp K          &kp L    &kp SEMICOLON  &lt 2 SINGLE_QUOTE
-&lt 1 TILDE         &kp Z           &kp X           &kp C             &kp V        &kp B        &kp N    &kp M            &kp COMMA      &kp DOT  &kp FSLH       &lt 2 PIPE
+&kp ESCAPE          &kp Q           &kp W           &kp E             &kp R        &kp T        &PgUp    &kp U            &kp I          &kp O    &kp P          &kp BSPC
+&mt LEFT_SHIFT TAB  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &lt 4 G      &Left    &Down            &Up            &Right   &kp SEMICOLON  &lt 2 SINGLE_QUOTE
+&lt 1 TILDE         &kp Z           &kp X           &kp C             &kp V        &kp B        &PgDn    &kp M            &kp COMMA      &kp DOT  &kp FSLH       &lt 2 PIPE
                                                     &kp LGUI          &kp LCTRL    &kp SPACE    &kp RET  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
